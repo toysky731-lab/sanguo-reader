@@ -26,9 +26,13 @@
   <li>姓名、電郵、電話</li>
   <li>生日或實際年齡</li>
   <li>位置、通訊錄、相片</li>
-  <li>任何分析或追蹤資料</li>
 </ul>
-<p>這個 app 沒有帳號系統、沒有第三方登入、沒有任何第三方 SDK，也沒有分析工具。</p>
+<p>這個 app 沒有帳號系統、沒有第三方登入、沒有廣告、沒有追蹤。</p>
+
+<h2>使用分析</h2>
+<p>我們用 <a href="https://posthog.com">PostHog</a>（歐洲伺服器）記錄 app 點樣被使用：開咗邊一頁、揭到第幾回、發出嘅彈幕有<strong>幾多隻字</strong>、搜尋命中咗<strong>幾多回</strong>。</p>
+<p>佢<strong>接觸唔到</strong>你讀咗乜或者寫咗乜：每一個事件欄位喺程式入面都只可以係整數、真假值或者固定選項，根本冇位放文字；事件離開裝置之前仲會再經一次白名單過濾。彈幕內容、搜尋字詞、你的 iCloud 識別碼，一律唔會送出。</p>
+<p>我們亦關閉咗 PostHog 由 IP 推算地區嘅功能，所以唔會附帶任何位置。冇畫面錄影，冇當機收集。</p>
 
 <h2>離線的部分</h2>
 <p>一百二十回全文隨 app 一同下載，閱讀、搜尋、字體與底色設定全部在裝置上完成，不經網絡。你的閱讀位置只存在你的裝置。</p>
@@ -54,7 +58,7 @@
 
 <hr>
 <h2 class="en">English summary</h2>
-<p class="en">No account, no analytics, no third-party SDKs, no networking code beyond Apple CloudKit. The full text ships offline. Nothing leaves the device unless you enable the public annotation layer, and then only the annotation text, its paragraph anchor, its moderation status, and — when you report something — the reported item's id and your note. Readers are shown an opaque handle derived from Apple's anonymous CloudKit user record; we cannot identify you from it. Age gating asks the system for a 13+ answer only, never a birthday.</p>
+<p class="en">No account, no ads, no tracking. Product analytics via PostHog (EU): screen views, chapter opened, the <em>length</em> of a comment, the <em>number</em> of search matches — never the comment, the query or your handle, because every event property is an Int, Bool or closed enum and an allowlist strips the rest before sending. GeoIP is disabled. Otherwise no networking beyond Apple CloudKit. The full text ships offline. Nothing leaves the device unless you enable the public annotation layer, and then only the annotation text, its paragraph anchor, its moderation status, and — when you report something — the reported item's id and your note. Readers are shown an opaque handle derived from Apple's anonymous CloudKit user record; we cannot identify you from it. Age gating asks the system for a 13+ answer only, never a birthday.</p>
 
 <p class="sub" style="margin-top:2.5rem">聯絡：<a href="mailto:toysky731@icloud.com">toysky731@icloud.com</a></p>
 </body>
